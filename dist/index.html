@@ -24,12 +24,12 @@
       <div class="hero-copy">
         <div class="pill"><span class="pill-dot"></span> Расширение для Chrome</div>
         <h1>Поиск, который<br><em>выбираете вы.</em></h1>
-        <p class="hero-lead">Девять поисковых систем в одной аккуратной панели. Выберите любимую, введите запрос и продолжайте работу.</p>
+        <p class="hero-lead">Девять поисковых систем в одной аккуратной панели. Выберите любимую — следующие запросы из адресной строки откроются через неё.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#install">Попробовать расширение <span aria-hidden="true">↗</span></a>
           <a class="button button-text" href="#how">Как это работает <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="hero-detail"><span class="check">✓</span> Выбор сохраняется между запусками Chrome <span class="detail-sep">·</span> Без аккаунта</div>
+        <div class="hero-detail"><span class="check">✓</span> Выбор сохраняется между запусками Chrome <span class="detail-sep">·</span> Работает с поддерживаемыми поисковиками</div>
       </div>
       <div class="demo-shell" aria-label="Демонстрация панели расширения">
         <div class="browser-top"><div class="traffic"><i></i><i></i><i></i></div><div class="address">example.com <span>☆</span></div><span class="browser-tool">⌕</span><span class="dots">⋮</span></div>
@@ -39,7 +39,6 @@
           <h2>Поисковик</h2>
           <p class="selected-label">Выбран: <strong id="selected-name">Google</strong></p>
           <div id="demo-engines" class="demo-engines"></div>
-          <div class="demo-search"><span id="demo-placeholder">Что найти?</span><span class="demo-arrow">→</span></div>
           <div class="demo-foot">Выбор сохранён в расширении</div>
         </div>
       </div>
@@ -52,7 +51,7 @@
         <div class="steps">
           <article><span class="step-number">01</span><h3>Откройте панель</h3><p>Нажмите на иконку Search Switcher рядом с адресной строкой Chrome.</p></article>
           <article><span class="step-number">02</span><h3>Выберите сервис</h3><p>Нажмите на один из девяти поисковиков. Он останется выбранным после перезапуска браузера.</p></article>
-          <article><span class="step-number">03</span><h3>Введите запрос</h3><p>Ищите из панели расширения. Результаты откроются в новой вкладке.</p></article>
+          <article><span class="step-number">03</span><h3>Ищите как обычно</h3><p>Введите запрос в адресной строке Chrome. Результаты откроются через выбранный сервис.</p></article>
         </div>
       </div>
     </section>
@@ -65,13 +64,13 @@
     </section>
 
     <section class="clarity-section">
-      <div class="section-wrap clarity-grid"><div><div class="section-kicker">ВАЖНО ЗНАТЬ</div><h2>Ваш поиск остаётся вашим выбором.</h2></div><p>Расширение запоминает поисковик для запросов из своей панели. Поисковая система адресной строки Chrome задаётся отдельно в настройках браузера. Мы показываем эту разницу открыто.</p></div>
+      <div class="section-wrap clarity-grid"><div><div class="section-kicker">ВАЖНО ЗНАТЬ</div><h2>Ваш поиск остаётся вашим выбором.</h2></div><p>Расширение перенаправляет поисковые запросы с поддерживаемых сайтов на выбранный сервис. Название поисковика в настройках Chrome при этом не меняется. Прямой поиск на одном из поддерживаемых сайтов тоже будет перенаправлен.</p></div>
     </section>
 
     <section id="faq" class="faq-section section-wrap">
       <div class="section-kicker">ЧАСТЫЕ ВОПРОСЫ</div><h2>Коротко о главном</h2>
       <details><summary>Сохраняется ли мой выбор после перезапуска Chrome?</summary><p>Да. Выбранный сервис хранится локально в браузере и подставляется при следующем открытии панели.</p></details>
-      <details><summary>Меняется ли поиск из адресной строки?</summary><p>Нет. Для этого откройте настройки поиска Chrome. Расширение помогает быстро выбирать сервис для поиска из своей панели.</p></details>
+      <details><summary>Работает ли поиск из адресной строки?</summary><p>Да, если поисковик, установленный в Chrome, входит в список поддерживаемых. Расширение перенаправляет его страницу результатов на выбранный сервис.</p></details>
       <details><summary>Нужна ли регистрация?</summary><p>Нет. Выбор и поиск доступны без аккаунта.</p></details>
     </section>
 
