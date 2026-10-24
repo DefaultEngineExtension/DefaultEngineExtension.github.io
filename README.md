@@ -1,7 +1,11 @@
 # Set Default Search Engine landing page
 
-Static English landing page for the Set Default Search Engine Chrome extension. Site source
-is in `dist/`; `.openai/hosting.json` connects it to its Sites deployment.
+Static English landing page for the Set Default Search Engine Chrome extension.
+GitHub Pages deploys the `main` branch from the repository root. The site
+uses `index.html`, `style.css`, `script.js`, and `assets/` directly; there
+is no build step.
+
+Live URL: https://defaultengineextension.github.io/default-engine-extension-landing/
 
 The page explains that the extension redirects result navigations from supported
 search engines, including address-bar searches when Chrome uses a supported
