@@ -1,80 +1,80 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search Switcher — выбирайте один из девяти поисковиков и ищите прямо из панели расширения Chrome.">
+  <meta name="description" content="Search Switcher lets you choose from nine search engines in one simple Chrome extension.">
   <meta name="theme-color" content="#f7f9fd">
-  <title>Search Switcher — любимый поиск всегда под рукой</title>
+  <title>Search Switcher — search your way</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <a href="#" class="brand" aria-label="Search Switcher, наверх"><span class="brand-icon">⌕</span> Search Switcher</a>
-    <nav aria-label="Навигация">
-      <a href="#how">Как работает</a>
-      <a href="#engines">Поисковики</a>
-      <a href="#faq">Вопросы</a>
+    <a href="#" class="brand" aria-label="Search Switcher, back to top"><span class="brand-icon">⌕</span> Search Switcher</a>
+    <nav aria-label="Main navigation">
+      <a href="#how">How it works</a>
+      <a href="#engines">Search engines</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="header-cta" href="#install">Установить <span aria-hidden="true">↗</span></a>
+    <a class="header-cta" href="#install">Get the extension <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
     <section class="hero section-wrap">
       <div class="hero-copy">
-        <div class="pill"><span class="pill-dot"></span> Расширение для Chrome</div>
-        <h1>Поиск, который<br><em>выбираете вы.</em></h1>
-        <p class="hero-lead">Девять поисковых систем в одной аккуратной панели. Выберите любимую — следующие запросы из адресной строки откроются через неё.</p>
+        <div class="pill"><span class="pill-dot"></span> CHROME EXTENSION</div>
+        <h1>Search the way<br><em>you want.</em></h1>
+        <p class="hero-lead">Nine search engines in one simple popup. Choose your favorite, and your next address bar search will open with it.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#install">Попробовать расширение <span aria-hidden="true">↗</span></a>
-          <a class="button button-text" href="#how">Как это работает <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#install">Explore the extension <span aria-hidden="true">↗</span></a>
+          <a class="button button-text" href="#how">How it works <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="hero-detail"><span class="check">✓</span> Выбор сохраняется между запусками Chrome <span class="detail-sep">·</span> Работает с поддерживаемыми поисковиками</div>
+        <div class="hero-detail"><span class="check">✓</span> Your choice survives browser restarts <span class="detail-sep">·</span> Works with supported search engines</div>
       </div>
-      <div class="demo-shell" aria-label="Демонстрация панели расширения">
+      <div class="demo-shell" aria-label="Extension popup preview">
         <div class="browser-top"><div class="traffic"><i></i><i></i><i></i></div><div class="address">example.com <span>☆</span></div><span class="browser-tool">⌕</span><span class="dots">⋮</span></div>
         <div class="browser-page"><div class="page-line line-1"></div><div class="page-line line-2"></div><div class="page-card"></div></div>
         <div class="demo-popup">
           <div class="popup-overline">SEARCH SWITCHER</div>
-          <h2>Поисковик</h2>
-          <p class="selected-label">Выбран: <strong id="selected-name">Google</strong></p>
+          <h2>Search Engine</h2>
+          <p class="selected-label">Active: <strong id="selected-name">Google</strong></p>
           <div id="demo-engines" class="demo-engines"></div>
-          <div class="demo-foot">Выбор сохранён в расширении</div>
+          <div class="demo-foot">Your choice is saved in the extension</div>
         </div>
       </div>
     </section>
 
     <section id="how" class="how-section">
       <div class="section-wrap">
-        <div class="section-kicker">ПРОСТОЙ ПУТЬ К ПОИСКУ</div>
-        <h2>Три действия. И готово.</h2>
+        <div class="section-kicker">SEARCH, MADE SIMPLE</div>
+        <h2>Three steps. That's it.</h2>
         <div class="steps">
-          <article><span class="step-number">01</span><h3>Откройте панель</h3><p>Нажмите на иконку Search Switcher рядом с адресной строкой Chrome.</p></article>
-          <article><span class="step-number">02</span><h3>Выберите сервис</h3><p>Нажмите на один из девяти поисковиков. Он останется выбранным после перезапуска браузера.</p></article>
-          <article><span class="step-number">03</span><h3>Ищите как обычно</h3><p>Введите запрос в адресной строке Chrome. Результаты откроются через выбранный сервис.</p></article>
+          <article><span class="step-number">01</span><h3>Open the popup</h3><p>Click the Search Switcher icon next to Chrome's address bar.</p></article>
+          <article><span class="step-number">02</span><h3>Choose an engine</h3><p>Pick one of nine options. Your choice stays saved when you restart the browser.</p></article>
+          <article><span class="step-number">03</span><h3>Search as usual</h3><p>Enter a query in Chrome's address bar. Results open with your selected engine.</p></article>
         </div>
       </div>
     </section>
 
     <section id="engines" class="engine-section section-wrap">
-      <div class="engine-intro"><div><div class="section-kicker">ОДНА ПАНЕЛЬ, ДЕВЯТЬ ВАРИАНТОВ</div><h2>Меняйте направление<br>в один клик.</h2></div><p>От привычного Google до поиска с ответами Perplexity. Выбор всегда под рукой.</p></div>
+      <div class="engine-intro"><div><div class="section-kicker">ONE POPUP, NINE OPTIONS</div><h2>Change direction<br>in one click.</h2></div><p>From familiar Google results to answers from Perplexity, your choice is always close by.</p></div>
       <div class="engine-list">
         <span>Google</span><span>Bing</span><span>DuckDuckGo</span><span>Yahoo</span><span>Qwant</span><span>Perplexity</span><span>Startpage</span><span>Yandex</span><span>Brave</span>
       </div>
     </section>
 
     <section class="clarity-section">
-      <div class="section-wrap clarity-grid"><div><div class="section-kicker">ВАЖНО ЗНАТЬ</div><h2>Ваш поиск остаётся вашим выбором.</h2></div><p>Расширение перенаправляет поисковые запросы с поддерживаемых сайтов на выбранный сервис. Название поисковика в настройках Chrome при этом не меняется. Прямой поиск на одном из поддерживаемых сайтов тоже будет перенаправлен.</p></div>
+      <div class="section-wrap clarity-grid"><div><div class="section-kicker">GOOD TO KNOW</div><h2>Your search, your choice.</h2></div><p>The extension redirects searches from supported sites to the engine you choose. Chrome's displayed search setting stays the same. Searches you make directly on a supported site are redirected too.</p></div>
     </section>
 
     <section id="faq" class="faq-section section-wrap">
-      <div class="section-kicker">ЧАСТЫЕ ВОПРОСЫ</div><h2>Коротко о главном</h2>
-      <details><summary>Сохраняется ли мой выбор после перезапуска Chrome?</summary><p>Да. Выбранный сервис хранится локально в браузере и подставляется при следующем открытии панели.</p></details>
-      <details><summary>Работает ли поиск из адресной строки?</summary><p>Да, если поисковик, установленный в Chrome, входит в список поддерживаемых. Расширение перенаправляет его страницу результатов на выбранный сервис.</p></details>
-      <details><summary>Нужна ли регистрация?</summary><p>Нет. Выбор и поиск доступны без аккаунта.</p></details>
+      <div class="section-kicker">FREQUENTLY ASKED QUESTIONS</div><h2>Good to know</h2>
+      <details><summary>Will my choice stay saved after I restart Chrome?</summary><p>Yes. Your selected engine is stored locally in the browser and restored the next time you open the popup.</p></details>
+      <details><summary>Does it work with address bar searches?</summary><p>Yes, when Chrome's configured search engine is one of the supported options. The extension redirects its results page to the engine you selected.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. You can choose an engine and search without signing up.</p></details>
     </section>
 
-    <section id="install" class="install-section section-wrap"><div class="install-card"><div><div class="section-kicker">НАЧНИТЕ С ЛЮБИМОГО ПОИСКА</div><h2>Девять способов найти ответ.</h2><p>Скоро в Chrome Web Store. Пока можно установить расширение из исходного кода.</p></div><span class="coming-soon">Публикация скоро</span></div></section>
+    <section id="install" class="install-section section-wrap"><div class="install-card"><div><div class="section-kicker">START WITH YOUR FAVORITE</div><h2>Nine ways to find an answer.</h2><p>Coming soon to the Chrome Web Store. For now, you can load the extension from its source code.</p></div><span class="coming-soon">Coming soon</span></div></section>
   </main>
   <footer><span class="brand"><span class="brand-icon">⌕</span> Search Switcher</span><span>© 2026 Search Switcher</span></footer>
   <script src="script.js"></script>

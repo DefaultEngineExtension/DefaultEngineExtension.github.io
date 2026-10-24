@@ -6,7 +6,7 @@ const engines = [
   ["Qwant", "Q", "#f3ecff", "#5c18c8"],
   ["Perplexity", "✳", "#e6f5f3", "#177e83"],
   ["Startpage", "S", "#e9eeff", "#5669d9"],
-  ["Yandex", "Я", "#ffefea", "#e94738"],
+  ["Yandex", "Ya", "#ffefea", "#e94738"],
   ["Brave", "Br", "#fff0e8", "#f45c31"]
 ];
 const grid = document.getElementById("demo-engines");
