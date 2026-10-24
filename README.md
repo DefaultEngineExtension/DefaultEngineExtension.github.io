@@ -1,6 +1,6 @@
-# Search Switcher landing page
+# Set Default Search Engine landing page
 
-Static Russian landing page for the Search Switcher Chrome extension. Site source
+Static English landing page for the Set Default Search Engine Chrome extension. Site source
 is in `dist/`; `.openai/hosting.json` connects it to its Sites deployment.
 
 The page explains that the extension redirects result navigations from supported
