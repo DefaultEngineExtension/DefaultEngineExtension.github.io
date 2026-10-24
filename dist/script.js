@@ -22,7 +22,11 @@ for (const [name, mark, bg, fg] of engines) {
   logo.className = "demo-mark";
   logo.style.setProperty("--bg", bg);
   logo.style.setProperty("--fg", fg);
-  logo.textContent = mark;
+  const image = document.createElement("img");
+  image.src = `assets/engines/${name.toLowerCase()}.png`;
+  image.alt = "";
+  image.addEventListener("error", () => { logo.textContent = mark; });
+  logo.append(image);
   button.append(logo, document.createTextNode(name));
   button.addEventListener("click", () => {
     selected.textContent = name;
