@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Set Default Search Engine, a Chrome extension that redirects searches to the engine you choose.">
+  <meta name="theme-color" content="#f7f9fd">
+  <title>Privacy Policy — Set Default Search Engine</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .privacy-header { min-height: 78px; width: min(1160px, calc(100% - 64px)); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #e4eaf2; }
+    .privacy-back { color: #66738b; font-size: 13px; font-weight: 600; }
+    .privacy-page { width: min(820px, calc(100% - 48px)); margin: auto; padding: 70px 0 90px; }
+    .privacy-page h1, .privacy-page h2 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
+    .privacy-page h1 { margin: 12px 0 8px; font-size: clamp(38px, 6vw, 56px); line-height: 1.12; }
+    .privacy-updated { color: #8996a9; font-size: 13px; margin: 0 0 22px; }
+    .privacy-lede { color: #647188; font-size: 17px; line-height: 1.75; margin: 0 0 36px; }
+    .privacy-toc { background: #fff; border: 1px solid #e1e8f2; border-radius: 15px; padding: 23px 26px; margin-bottom: 48px; }
+    .privacy-toc strong { display: block; color: #2b71ed; text-transform: uppercase; letter-spacing: .14em; font-size: 10px; margin-bottom: 12px; }
+    .privacy-toc ol { margin: 0; padding-left: 21px; columns: 2; column-gap: 28px; color: #2b71ed; }
+    .privacy-toc li { break-inside: avoid; padding: 3px 0; }
+    .privacy-toc a { color: #42516a; font-size: 13px; }
+    .privacy-section { margin: 0 0 36px; padding-left: 20px; border-left: 2px solid #dce6f3; scroll-margin-top: 24px; }
+    .privacy-section .section-kicker { margin-bottom: 7px; }
+    .privacy-section h2 { margin: 0 0 12px; font-size: 24px; }
+    .privacy-section p, .privacy-section li { color: #5f6e84; font-size: 15px; line-height: 1.8; }
+    .privacy-section p { margin: 0 0 12px; }
+    .privacy-section ul { margin: 0 0 14px; padding-left: 20px; }
+    .privacy-section li { margin: 4px 0; }
+    .privacy-callout { background: #eaf2ff; border-radius: 12px; color: #435979; padding: 16px 19px; font-size: 14px; line-height: 1.7; }
+    @media (max-width: 600px) { .privacy-header { width: calc(100% - 32px); min-height: 66px; }.privacy-header .brand { font-size: 13px; }.privacy-page { width: calc(100% - 36px); padding: 48px 0 65px; }.privacy-toc ol { columns: 1; }.privacy-section { padding-left: 15px; } }
+  </style>
+</head>
+<body>
+  <header class="privacy-header">
+    <a href="/" class="brand"><span class="brand-icon">⌕</span> Set Default Search Engine</a>
+    <a class="privacy-back" href="/">← Back to home</a>
+  </header>
+  <main class="privacy-page">
+    <div class="section-kicker">PRIVACY &amp; DATA</div>
+    <h1>Privacy Policy</h1>
+    <p class="privacy-updated">Last updated: October 26, 2026</p>
+    <p class="privacy-lede">Set Default Search Engine is a Chrome extension that lets you choose which supported search engine handles your searches. This policy explains what the extension and this website do with information.</p>
+
+    <nav class="privacy-toc" aria-label="Table of contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#extension-data">Information used by the extension</a></li>
+        <li><a href="#search-providers">Search providers</a></li>
+        <li><a href="#website">Website and analytics</a></li>
+        <li><a href="#sharing">Sharing and retention</a></li>
+        <li><a href="#choices">Your choices</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+      </ol>
+    </nav>
+
+    <section id="overview" class="privacy-section">
+      <div class="section-kicker">01</div>
+      <h2>Overview</h2>
+      <p>The extension does not operate an account system or a server and does not send your information to its developer. It stores your selected search engine in Chrome on your device and uses Chrome's declarative network request feature to redirect supported search result pages to that engine.</p>
+      <div class="privacy-callout">Your search query is sent to the search provider that ultimately displays your results. Each provider handles that query under its own privacy policy.</div>
+    </section>
+
+    <section id="extension-data" class="privacy-section">
+      <div class="section-kicker">02</div>
+      <h2>Information used by the extension</h2>
+      <p>The extension uses the following information only to provide its search selection feature:</p>
+      <ul>
+        <li><strong>Selected search engine:</strong> the provider you chose, stored locally with <code>chrome.storage.local</code> so the choice is restored after Chrome restarts.</li>
+        <li><strong>Search page address:</strong> Chrome's Declarative Net Request API checks supported search result navigations and redirects them according to your selection. The extension does not separately collect, log, or transmit the address or search terms.</li>
+      </ul>
+      <p>The extension does not request your name, email address, account credentials, precise location, or browsing history for collection. It does not include advertising, analytics, or tracking code.</p>
+    </section>
+
+    <section id="search-providers" class="privacy-section">
+      <div class="section-kicker">03</div>
+      <h2>Search providers</h2>
+      <p>When a search is redirected, the selected provider receives the resulting request, which can include your search terms and ordinary connection data such as your IP address and browser details. Supported providers include Google, Bing, DuckDuckGo, Yahoo, Qwant, Perplexity, Startpage, Yandex, and Brave.</p>
+      <p>These providers are independent services. Their privacy policies and data practices apply after your browser connects to them. The extension's developer does not receive the search query through the extension.</p>
+    </section>
+
+    <section id="website" class="privacy-section">
+      <div class="section-kicker">04</div>
+      <h2>Website and analytics</h2>
+      <p>This website does not ask you to create an account, does not use advertising or analytics, and does not set cookies. The page loads fonts from Google Fonts; your browser makes a request to Google's font service, which may receive standard request information such as your IP address and browser details. Google's privacy policy applies to that request.</p>
+    </section>
+
+    <section id="sharing" class="privacy-section">
+      <div class="section-kicker">05</div>
+      <h2>Sharing and retention</h2>
+      <p>The extension developer does not receive or retain information collected by the extension. Your selected engine remains in Chrome's local extension storage until you change it, remove the extension, or clear the browser's extension data. Search providers may retain search requests under their own policies.</p>
+    </section>
+
+    <section id="choices" class="privacy-section">
+      <div class="section-kicker">06</div>
+      <h2>Your choices</h2>
+      <p>You can select another provider at any time by opening the extension popup. You can stop the extension from redirecting searches by disabling or uninstalling it in <code>chrome://extensions</code>. Uninstalling the extension also removes its locally stored selection from Chrome.</p>
+    </section>
+
+    <section id="children" class="privacy-section">
+      <div class="section-kicker">07</div>
+      <h2>Children</h2>
+      <p>The extension is a general-purpose browser utility and is not designed to collect personal information from children.</p>
+    </section>
+
+    <section id="changes" class="privacy-section">
+      <div class="section-kicker">08</div>
+      <h2>Policy changes</h2>
+      <p>This policy may be updated if the extension or website changes. The date at the top of this page indicates when it was most recently revised.</p>
+    </section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-icon">⌕</span> Set Default Search Engine</a><span>© 2026 Set Default Search Engine</span><a href="/">Home</a></footer>
+</body>
+</html>
