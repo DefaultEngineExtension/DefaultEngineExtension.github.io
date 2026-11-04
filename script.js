@@ -1,6 +1,6 @@
 const translations = {
   ru: {
-    navHow: 'Как это работает', navEngines: 'Поисковые системы', navFaq: 'Вопросы', language: 'Язык', getExtension: 'Установить ↗',
+    navHow: 'Как это работает', navEngines: 'Поисковые системы', navFaq: 'FAQ', navPrivacy: 'Конфиденциальность', language: 'Язык', getExtension: 'Установить ↗',
     eyebrow: 'БОЛЬШЕ СВОБОДЫ ВЫБОРА', heroLine1: 'Ваш поиск.', heroLine2: 'Ваш выбор.',
     lead: 'Девять поисковых систем. Один переключатель. Выберите любимую и продолжайте искать через адресную строку.',
     addChrome: 'Добавить в Chrome', detail: 'Без регистрации. Ваш выбор сохраняется.', demoLabel: 'ПОПРОБУЙТЕ ПЕРЕКЛЮЧИТЬ',

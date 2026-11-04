@@ -5,3 +5,34 @@
 @media(max-width:760px){.section-wrap,.site-header{width:calc(100% - 40px)}.site-header{min-height:76px;gap:12px}.site-header nav,.header-cta{display:none}.brand{font-size:17px}.hero{grid-template-columns:1fr;padding:50px 0;gap:40px}.hero-copy{max-width:520px}h1{font-size:64px}.demo-stage{width:min(100%,440px);justify-self:center;padding:22px}.hero-lead{font-size:17px}.engine-intro{display:block}.engine-intro p{margin-top:12px;line-height:1.6}.engine-list{gap:18px}.engine-section{padding-bottom:45px}.steps,.clarity-grid{grid-template-columns:1fr;gap:30px}.steps{margin-top:35px}.steps h3{margin-top:15px}.how-section,.faq-section{padding:55px 0}.clarity-section{padding:55px 0}.install-card{display:block;padding:30px}.install-card .button{margin-top:25px}.install-section{padding-bottom:50px}footer{flex-direction:column;align-items:flex-start;padding:25px 20px;gap:16px}}
 @media(max-width:360px){h1{font-size:54px}.demo-stage{padding:14px}.demo-popup{padding:18px}.hero-actions{gap:14px}.button{font-size:13px;padding-inline:16px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
+
+/* Align both hero columns at the same top edge. */
+.hero{align-items:start}
+:root{color-scheme:light dark}
+@media(prefers-color-scheme:dark){
+ :root{color:#eceef2;background:#191c20;--blue:#8ab4ff;--muted:#adb5be;--line:#373e46}
+ .demo-stage,.install-card{background:#252d2b}
+ .how-section{background:#202624}
+ .demo-caption,.demo-disclaimer{color:#a6b6ab}
+ .demo-caption-line{background:#4b5b51}
+ .caption-dot{background:#a6b6ab}
+ .section-kicker,.step-number{color:#9cc4a8}
+ .steps article{border-color:var(--line)}
+ .engine-list span{color:#c3cec7}
+ .pill-dot{background:#55ce91}
+ .button-primary{background:#296de2;color:#fff}
+ .button-primary:hover{background:#377cf1}
+ .language-label select option{background:#202624;color:#eceef2}
+ .privacy-header{border-color:var(--line)}
+ .privacy-back,.privacy-lede,.privacy-section p,.privacy-section li{color:var(--muted)}
+ .privacy-updated{color:#a6b6ab}
+ .privacy-toc{background:#202624;border-color:var(--line)}
+ .privacy-toc strong,.privacy-toc ol{color:var(--blue)}
+ .privacy-toc a{color:#c3cec7}
+ .privacy-section{border-color:#4b5b51}
+ .privacy-callout{background:#253751;color:#d2e2fa}
+}
+@media(max-width:760px){
+ .site-header{flex-wrap:wrap;padding:16px 0}
+ .site-header nav{display:flex;order:3;width:100%;flex-wrap:wrap;gap:12px 20px;font-size:12px}
+}
