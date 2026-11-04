@@ -3,81 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Set Default Search Engine lets you choose from nine search engines in one simple Chrome extension.">
-  <meta name="theme-color" content="#f7f9fd">
+  <meta name="description" content="Choose from nine search engines in one simple Chrome extension. Your search, your choice.">
+  <meta name="theme-color" content="#fafbf9">
   <title>Set Default Search Engine — search your way</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <a href="#" class="brand" aria-label="Set Default Search Engine, back to top"><span class="brand-icon">⌕</span> Set Default Search Engine</a>
-    <nav aria-label="Main navigation">
-      <a href="#how">How it works</a>
-      <a href="#engines">Search engines</a>
-      <a href="#faq">FAQ</a>
-      <a href="/privacy/">Privacy</a>
+    <a href="#" class="brand"><img src="assets/logo.svg" width="34" height="34" alt=""> <span>Default Search</span></a>
+    <nav aria-label="Navigation">
+      <a href="#how" data-i18n="navHow">How it works</a>
+      <a href="#engines" data-i18n="navEngines">Search engines</a>
+      <a href="#faq" data-i18n="navFaq">Questions</a>
     </nav>
-    <a class="header-cta" href="#install">Get the extension <span aria-hidden="true">↗</span></a>
+    <div class="header-actions"><label class="language-label"><span class="sr-only" data-i18n="language">Language</span><select id="language"><option value="en">EN</option><option value="ru">RU</option></select></label><a class="header-cta" href="#install" data-i18n="getExtension">Get the extension ↗</a></div>
   </header>
-
   <main>
     <section class="hero section-wrap">
       <div class="hero-copy">
-        <div class="pill"><span class="pill-dot"></span> CHROME EXTENSION</div>
-        <h1>Search the way<br><em>you want.</em></h1>
-        <p class="hero-lead">Nine search engines in one simple popup. Choose your favorite, and your next address bar search will open with it.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://chromewebstore.google.com/detail/set-default-search-engine/pnplooooeljidffpakjpbhjgmlfinbaf" target="_blank" rel="noopener noreferrer">Explore the extension <span aria-hidden="true">↗</span></a>
-          <a class="button button-text" href="#how">How it works <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-detail"><span class="check">✓</span> Your choice survives browser restarts <span class="detail-sep">·</span> Works with supported search engines</div>
+        <div class="pill"><span class="pill-dot"></span><span data-i18n="eyebrow">A LITTLE MORE CHOICE</span></div>
+        <h1><span data-i18n="heroLine1">Your search.</span><br><em data-i18n="heroLine2">Your way.</em></h1>
+        <p class="hero-lead" data-i18n="lead">Nine search engines. One simple switch. Pick your favorite and keep searching from your address bar.</p>
+        <div class="hero-actions"><a class="button button-primary store-link" href="https://chromewebstore.google.com/detail/set-default-search-engine/pnplooooeljidffpakjpbhjgmlfinbaf" target="_blank" rel="noopener noreferrer"><span data-i18n="addChrome">Add to Chrome</span><span aria-hidden="true">↗</span></a><a class="button button-text" href="#how"><span data-i18n="navHow">How it works</span><span aria-hidden="true">↓</span></a></div>
+        <div class="hero-detail" data-i18n="detail">No account needed. Your choice stays saved.</div>
       </div>
-      <div class="demo-shell" aria-label="Extension popup preview">
-        <div class="browser-top"><div class="traffic"><i></i><i></i><i></i></div><div class="address">example.com <span>☆</span></div><span class="browser-tool">⌕</span><span class="dots">⋮</span></div>
-        <div class="browser-page"><div class="page-line line-1"></div><div class="page-line line-2"></div><div class="page-card"></div></div>
-        <div class="demo-popup">
-          <div class="popup-overline">SET DEFAULT SEARCH ENGINE</div>
-          <h2>Search Engine</h2>
-          <p class="selected-label">Active: <strong id="selected-name">Google</strong></p>
-          <div id="demo-engines" class="demo-engines"></div>
-          <div class="demo-foot">Your choice is saved in the extension</div>
+      <div class="demo-stage">
+        <div class="demo-caption"><span class="caption-dot"></span><span data-i18n="demoLabel">TRY THE POPUP</span><span class="demo-caption-line"></span></div>
+        <div class="demo-popup" aria-label="Extension demo">
+          <div class="popup-header"><img src="assets/logo.svg" width="34" height="34" alt=""><div><h2 data-i18n="popupTitle">Search engine</h2><p class="selected-label"><span class="selected-dot"></span><bdi id="selected-name">Google</bdi></p></div></div>
+          <div id="demo-engines" class="demo-engines" role="group" aria-label="Search engines"></div>
+          <p class="demo-foot" data-i18n="popupNote">Searches from the address bar and supported search sites will open with your selected engine.</p>
         </div>
+        <p class="demo-disclaimer" data-i18n="demoNote">An interactive preview. Your browser settings stay unchanged.</p>
       </div>
     </section>
-
-    <section id="how" class="how-section">
-      <div class="section-wrap">
-        <div class="section-kicker">SEARCH, MADE SIMPLE</div>
-        <h2>Three steps. That's it.</h2>
-        <div class="steps">
-          <article><span class="step-number">01</span><h3>Open the popup</h3><p>Click the Set Default Search Engine icon next to Chrome's address bar.</p></article>
-          <article><span class="step-number">02</span><h3>Choose an engine</h3><p>Pick one of nine options. Your choice stays saved when you restart the browser.</p></article>
-          <article><span class="step-number">03</span><h3>Search as usual</h3><p>Enter a query in Chrome's address bar. Results open with your selected engine.</p></article>
-        </div>
-      </div>
-    </section>
-
     <section id="engines" class="engine-section section-wrap">
-      <div class="engine-intro"><div><div class="section-kicker">ONE POPUP, NINE OPTIONS</div><h2>Change direction<br>in one click.</h2></div><p>From familiar Google results to answers from Perplexity, your choice is always close by.</p></div>
-      <div class="engine-list">
-        <span>Google</span><span>Bing</span><span>DuckDuckGo</span><span>Yahoo</span><span>Qwant</span><span>Perplexity</span><span>Startpage</span><span>Yandex</span><span>Brave</span>
-      </div>
+      <div class="engine-intro"><div class="section-kicker" data-i18n="enginesKicker">FIND YOUR FAVORITE</div><p data-i18n="enginesLead">Familiar results, fresh perspectives, or AI answers. You choose.</p></div>
+      <div class="engine-list" id="engine-list"></div>
     </section>
-
-    <section class="clarity-section">
-      <div class="section-wrap clarity-grid"><div><div class="section-kicker">GOOD TO KNOW</div><h2>Your search, your choice.</h2></div><p>The extension redirects searches from supported sites to the engine you choose. Chrome's displayed search setting stays the same. Searches you make directly on a supported site are redirected too.</p></div>
+    <section id="how" class="how-section"><div class="section-wrap"><div class="section-kicker" data-i18n="howKicker">LESS SETUP. MORE SEARCH.</div><h2 data-i18n="howTitle">Three steps. Then you're set.</h2><div class="steps">
+      <article><span class="step-number">01</span><h3 data-i18n="step1Title">Open the extension</h3><p data-i18n="step1">Click its icon next to Chrome’s address bar.</p></article>
+      <article><span class="step-number">02</span><h3 data-i18n="step2Title">Pick your engine</h3><p data-i18n="step2">Choose one of nine options. Switch again whenever you like.</p></article>
+      <article><span class="step-number">03</span><h3 data-i18n="step3Title">Search as usual</h3><p data-i18n="step3">Search from the address bar using a supported provider. The extension sends you to your chosen engine.</p></article>
+    </div></div></section>
+    <section class="clarity-section section-wrap"><div class="clarity-grid"><div><div class="section-kicker" data-i18n="clarityKicker">A QUICK NOTE</div><h2 data-i18n="clarityTitle">A switch for your searches.</h2></div><p data-i18n="clarity">The extension redirects search results from supported sites to your chosen engine. It also works when you search directly on those sites. The search engine shown in Chrome’s settings stays unchanged.</p></div></section>
+    <section id="faq" class="faq-section section-wrap"><div class="section-kicker" data-i18n="faqKicker">A FEW ANSWERS</div><h2 data-i18n="faqTitle">Good to know.</h2>
+      <details><summary data-i18n="faq1">Will my choice stay saved?</summary><p data-i18n="answer1">Yes. Your selection is stored locally in Chrome and restored after browser restarts.</p></details>
+      <details><summary data-i18n="faq2">Does it work from the address bar?</summary><p data-i18n="answer2">Yes, when Chrome’s current search provider is one of the nine supported engines. Other providers and unsupported search URLs are not redirected.</p></details>
+      <details><summary data-i18n="faq3">Do I need an account?</summary><p data-i18n="answer3">No. Install the extension, choose an engine, and start searching.</p></details>
+      <details><summary data-i18n="faq4">Does this demo change my search engine?</summary><p data-i18n="answer4">No. The preview only demonstrates the interface. Install the extension to redirect your searches.</p></details>
     </section>
-
-    <section id="faq" class="faq-section section-wrap">
-      <div class="section-kicker">FREQUENTLY ASKED QUESTIONS</div><h2>Good to know</h2>
-      <details><summary>Will my choice stay saved after I restart Chrome?</summary><p>Yes. Your selected engine is stored locally in the browser and restored the next time you open the popup.</p></details>
-      <details><summary>Does it work with address bar searches?</summary><p>Yes, when Chrome's configured search engine is one of the supported options. The extension redirects its results page to the engine you selected.</p></details>
-      <details><summary>Do I need an account?</summary><p>No. You can choose an engine and search without signing up.</p></details>
-    </section>
-
-    <section id="install" class="install-section section-wrap"><div class="install-card"><div><div class="section-kicker">START WITH YOUR FAVORITE</div><h2>Nine ways to find an answer.</h2><p>Choose your favorite search engine and get started in Chrome.</p></div><a class="button button-primary" href="https://chromewebstore.google.com/detail/set-default-search-engine/pnplooooeljidffpakjpbhjgmlfinbaf" target="_blank" rel="noopener noreferrer">Add to Chrome <span aria-hidden="true">↗</span></a></div></section>
+    <section id="install" class="install-section section-wrap"><div class="install-card"><div><div class="section-kicker" data-i18n="installKicker">MAKE IT YOURS</div><h2 data-i18n="installTitle">One click. A different direction.</h2><p data-i18n="installLead">Your next search starts with a choice.</p></div><a class="button button-primary store-link" href="https://chromewebstore.google.com/detail/set-default-search-engine/pnplooooeljidffpakjpbhjgmlfinbaf" target="_blank" rel="noopener noreferrer"><span data-i18n="addChrome">Add to Chrome</span><span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer><span class="brand"><span class="brand-icon">⌕</span> Set Default Search Engine</span><span>© 2026 Set Default Search Engine</span><a href="/privacy/">Privacy Policy</a></footer>
+  <footer><a href="#" class="brand"><img src="assets/logo.svg" width="28" height="28" alt="">Default Search</a><span>© 2026 Set Default Search Engine</span><a href="/privacy/" data-i18n="privacy">Privacy Policy (English)</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
