@@ -18,10 +18,18 @@ Language follows the browser (Russian or English fallback) and can be changed ma
 
 ## Uninstall feedback
 
-`/feedback/` uses the existing shared Google Form. Every submission starts with
-`[Set Default Search Engine] Uninstall feedback` and includes the extension version.
-The support mailbox is never embedded in the frontend. Google Forms controls the
-confirmation page and email notifications; its current confirmation title still
-refers to YouTube Subtitle Downloader. For product-specific confirmation and email
-subjects, create a separate Google Form and update the form action and entry ID.
-Publish this page before releasing the extension uninstall link.
+The custom `/feedback/` page submits JSON to the separate server endpoint and stays
+on the same page. A local thank-you appears only after the server verifies that
+Google Forms recorded the response. Failed requests preserve the typed feedback.
+
+Server source: `backend/feedback-handler.mjs` (not executed by GitHub Pages).
+Deployment project: appgprj_6aec97453a688191b7fd719381ddabcd.
+Endpoint: https://defaultsearch-feedback-api.finitelyric4.chatgpt.site/feedback
+Public access must be confirmed and anonymous access verified before this frontend
+change is released to main. The server was initially created owner-private.
+
+The intake is the existing shared Google Form, with a fixed product label in each
+response. Users never navigate to it. The recipient email is not in the frontend.
+Google Forms notification settings continue to control mail delivery.
+
+Tests: `node --test tests/feedback.test.cjs`.

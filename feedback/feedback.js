@@ -40,33 +40,40 @@ selector.addEventListener('change', () => {
 });
 render();
 button.disabled = false;
-let generated = null;
-form.addEventListener('submit', event => {
+const FEEDBACK_ENDPOINT = 'https://defaultsearch-feedback-api.finitelyric4.chatgpt.site/feedback';
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+  if (button.disabled) return;
   const data = new FormData(form);
   const reason = data.get('reason') || '';
   const message = String(data.get('message') || '').trim();
-  if (!reason && !message) { event.preventDefault(); statusKey = 'empty'; status.textContent = strings[language][statusKey]; return; }
-  if (data.get('website')) { event.preventDefault(); return; }
-  const reasons = {
-    'not-working': 'Did not work as expected',
-    'unexpected-redirects': 'Did not like search redirects',
-    'missing-engine': 'Search engine not available',
-    'no-longer-needed': 'No longer needed', other: 'Other'
-  };
-  generated?.remove();
-  generated = document.createElement('input');
-  generated.type = 'hidden';
-  generated.name = 'entry.440991757';
-  const version = params.get('version');
-  generated.value = '[Set Default Search Engine] Uninstall feedback\n' +
-    'Product: Set Default Search Engine\n' +
-    'Source: defaultsearch.online/feedback/\n' +
-    `Reason: ${reasons[reason] || 'not supplied'}\n` +
-    `Comment: ${message || '(no comment)'}\n` +
-    (version && /^\d+(\.\d+){0,3}$/.test(version) ? `Extension version: ${version}\n` : '') +
-    `Language: ${language}`;
-  form.appendChild(generated);
-  // Normal form navigation lets Google display the actual submission result.
-  // Do not infer successful delivery from an opaque cross-origin fetch.
+  if (!reason && !message) { statusKey = 'empty'; status.textContent = strings[language][statusKey]; return; }
+  if (data.get('website')) return;
+  button.disabled = true;
+  selector.disabled = true;
+  statusKey = 'sending';
+  status.textContent = strings[language][statusKey];
+  try {
+    const response = await fetch(FEEDBACK_ENDPOINT, {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      credentials: 'omit',
+      body: JSON.stringify({reason, message, website: '', version: params.get('version') || '', language}),
+      signal: AbortSignal.timeout(18000)
+    });
+    if (!response.ok) throw new Error('Feedback not accepted');
+    const result = await response.json();
+    if (result.ok !== true) throw new Error('Feedback not confirmed');
+    statusKey = '';
+    status.textContent = '';
+    form.hidden = true;
+    const thanks = document.getElementById('thanks');
+    thanks.hidden = false;
+    thanks.focus();
+  } catch {
+    statusKey = 'error';
+    status.textContent = strings[language][statusKey];
+  } finally {
+    button.disabled = false;
+    selector.disabled = false;
+  }
 });
-window.addEventListener('pageshow', () => { generated?.remove(); generated = null; });

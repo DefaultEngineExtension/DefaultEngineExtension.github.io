@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Feedback — Set Default Search Engine</title>
   <link rel="icon" href="../assets/favicon.png"><link rel="stylesheet" href="../style.css?v=20261105-feedback">
-  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="feedback.css?v=20261105-inline-confirmation">
 </head>
 <body>
 <header class="site-header"><a class="brand" href="/"><img src="../assets/logo.svg" width="34" height="34" alt="">Set Default Search Engine</a><label class="language-label"><span class="sr-only">Language</span><select id="language"><option value="en">EN</option><option value="ru">RU</option></select></label></header>
@@ -12,7 +12,7 @@
   <p class="section-kicker" data-i18n="kicker">THANK YOU FOR TRYING THE EXTENSION</p>
   <h1 data-i18n="title">What could we do better?</h1>
   <p class="intro" data-i18n="intro">Your feedback helps us improve Set Default Search Engine. This form is optional.</p>
-  <form id="feedback-form" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSelwO0_0e_gSuOZLs2WsVx0Yzso8UAnmI7nTHda1OdT9Cfbpw/formResponse">
+  <form id="feedback-form">
     <fieldset><legend data-i18n="reasonLabel">Why did you uninstall? (optional)</legend>
       <label class="reason"><input type="radio" name="reason" value="not-working"><span data-i18n="notWorking">It did not work as expected</span></label>
       <label class="reason"><input type="radio" name="reason" value="unexpected-redirects"><span data-i18n="redirects">I did not like how searches were redirected</span></label>
@@ -27,9 +27,10 @@
     <button class="button button-primary" id="submit" type="submit" disabled data-i18n="send">Send feedback</button>
     <p id="status" role="status" aria-live="polite"></p>
   </form>
-  <noscript>JavaScript is required to submit feedback with the correct product label.</noscript>
+  <p id="thanks" class="thanks" tabindex="-1" hidden data-i18n="thanks">Thank you. Your feedback has been sent.</p>
+  <noscript>JavaScript is required to submit feedback.</noscript>
   <a class="back" href="/" data-i18n="back">Back to the website</a>
   <a class="back" href="/privacy/" data-i18n="privacy">Privacy Policy (English)</a>
 </main>
-<script src="feedback.js"></script>
+<script src="feedback.js?v=20261105-inline-confirmation"></script>
 </body></html>
