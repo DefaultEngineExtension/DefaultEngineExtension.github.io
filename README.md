@@ -18,18 +18,14 @@ Language follows the browser (Russian or English fallback) and can be changed ma
 
 ## Uninstall feedback
 
-The custom `/feedback/` page submits JSON to the separate server endpoint and stays
-on the same page. A local thank-you appears only after the server verifies that
-Google Forms recorded the response. Failed requests preserve the typed feedback.
+The custom `/feedback/` page posts the collected reason, comment and extension
+version into the product-specific Set Default Search Engine Google Form:
+https://docs.google.com/forms/d/e/1FAIpQLScqTc9bphTqdqbebBUf3nhUiXYUGx1yVJu7PQ_41gkM_9Xy6A/viewform
 
-Server source: `backend/feedback-handler.mjs` (not executed by GitHub Pages).
-Deployment project: appgprj_6aec97453a688191b7fd719381ddabcd.
-Endpoint: https://defaultsearch-feedback-api.finitelyric4.chatgpt.site/feedback
-Public access must be confirmed and anonymous access verified before this frontend
-change is released to main. The server was initially created owner-private.
-
-The intake is the existing shared Google Form, with a fixed product label in each
-response. Users never navigate to it. The recipient email is not in the frontend.
-Google Forms notification settings continue to control mail delivery.
+The verified paragraph entry is `entry.1145454522`. Users fill only the custom
+form. Google then displays the product-specific recorded-response confirmation.
+Responses can be reviewed in the new form's Responses tab. The recipient mailbox
+is not embedded in the frontend; email notifications depend on Google Forms settings.
+No server-side relay is used.
 
 Tests: `node --test tests/feedback.test.cjs`.
