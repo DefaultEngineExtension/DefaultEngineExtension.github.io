@@ -100,3 +100,32 @@ position:relative; background:radial-gradient(ellipse at 100% 0%,var(--popup-was
 @media(prefers-reduced-motion:reduce){.demo-engine{transition:none}}
 
 .demo-engine:hover,.demo-engine:focus-visible{border-color:var(--popup-accent);color:var(--popup-ink);box-shadow:0 0 0 1px var(--popup-glow),0 0 22px var(--popup-glow),inset 0 0 18px var(--popup-wash-blue)}
+
+/* Product palette across the landing, not only the extension preview. */
+:root{--blue:#3985F7}
+.site-header a,footer a,.button,.engine-list span,.faq-section summary{transition:color .18s,box-shadow .18s,border-color .18s,background-color .18s}
+.site-header nav a:hover,.header-cta:hover,footer a:hover,.button-text:hover{color:var(--blue);text-shadow:0 0 14px #3985f74d}
+.button-primary{background:#3985F7;color:#fff}
+.button-primary:hover,.button-primary:focus-visible{background:#3985F7;box-shadow:0 0 0 1px #3985f74d,0 0 26px #3985f766}
+.engine-list span{border:1px solid transparent;border-radius:10px;padding:9px 12px}
+.engine-list span:hover{border-color:#3985F7;box-shadow:0 0 20px #3985f733}
+.faq-section summary:hover,.faq-section summary:focus-visible{color:var(--blue);text-shadow:0 0 14px #3985f733}
+@media(prefers-color-scheme:dark){
+ :root{background:#15191E;color:#F4F6F8;--muted:#99A4B2;--line:#35404D;--blue:#3985F7}
+ .demo-stage,.install-card,.how-section{background:#272D34}
+ .demo-caption,.demo-disclaimer,.hero-detail,.hero-lead,.steps p,.engine-intro p,.clarity-grid p,.faq-section p,.install-card p,footer,.site-header nav,.button-text,.language-label select{color:#99A4B2}
+ h1,h2,h3,.brand,.faq-section summary{color:#F4F6F8}
+ h1 em{color:#3985F7}
+ .section-kicker,.step-number{color:#99A4B2}
+ .pill-dot,.caption-dot{background:#22B983}
+ .check{color:#22B983}
+ .demo-caption-line,.steps article{border-color:#35404D}
+ .demo-caption-line{background:#35404D}
+ .engine-list span{color:#F4F6F8}
+ .hero-detail{color:#B6C0CC}
+ .site-header nav a:hover,.header-cta:hover,footer a:hover,.button-text:hover,.faq-section summary:hover{color:#3985F7}
+ .language-label select option{background:#272D34;color:#F4F6F8}
+ .privacy-toc{background:#272D34}
+ .privacy-toc a{color:#F4F6F8}
+}
+@media(prefers-reduced-motion:reduce){.site-header a,footer a,.button,.engine-list span,.faq-section summary{transition:none}}
