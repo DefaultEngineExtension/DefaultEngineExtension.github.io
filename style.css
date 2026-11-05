@@ -129,3 +129,12 @@ position:relative; background:radial-gradient(ellipse at 100% 0%,var(--popup-was
  .privacy-toc a{color:#F4F6F8}
 }
 @media(prefers-reduced-motion:reduce){.site-header a,footer a,.button,.engine-list span,.faq-section summary{transition:none}}
+
+/* Visible presentation-page hover feedback, including navigation and FAQ. */
+.site-header nav a,.header-cta,.button-text,footer a{border-radius:8px}
+.site-header nav a:hover,.header-cta:hover,.button-text:hover,footer a:hover{color:#3985F7;background:#3985F71a;box-shadow:0 0 22px #3985F759;outline:1px solid #3985F766}
+.demo-stage{transition:box-shadow .18s,border-color .18s;border:1px solid transparent}
+.demo-stage:hover{border-color:#3985F780;box-shadow:0 0 38px #3985F738}
+.faq-section summary:hover{background:#3985F712;box-shadow:0 0 22px #3985F733;border-radius:8px}
+.engine-list span:hover{background:#3985F71a;box-shadow:0 0 24px #3985F766}
+@media(prefers-reduced-motion:reduce){.demo-stage{transition:none}}
