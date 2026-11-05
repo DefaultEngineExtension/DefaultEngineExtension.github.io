@@ -27,7 +27,10 @@ function render() {
   document.documentElement.lang = language;
   document.title = `${strings[language].title} — Set Default Search Engine`;
   selector.value = language;
-  for (const el of document.querySelectorAll('[data-i18n]')) el.textContent = strings[language][el.dataset.i18n];
+  for (const el of document.querySelectorAll('[data-i18n]')) {
+    const value = strings[language][el.dataset.i18n];
+    if (el.textContent !== value) el.textContent = value;
+  }
   status.textContent = strings[language][statusKey] || '';
 }
 selector.addEventListener('change', () => {
@@ -42,7 +45,7 @@ form.addEventListener('submit', event => {
   const data = new FormData(form);
   const reason = data.get('reason') || '';
   const message = String(data.get('message') || '').trim();
-  if (!reason && !message) { event.preventDefault(); statusKey = 'empty'; render(); return; }
+  if (!reason && !message) { event.preventDefault(); statusKey = 'empty'; status.textContent = strings[language][statusKey]; return; }
   if (data.get('website')) { event.preventDefault(); return; }
   const reasons = {
     'not-working': 'Did not work as expected',

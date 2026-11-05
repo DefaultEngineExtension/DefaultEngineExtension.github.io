@@ -30,10 +30,16 @@ translations.en.pageTitle = document.title;
 translations.en.description = document.querySelector('meta[name="description"]').content;
 translations.en.demoAria = 'Extension demo';
 const languageSelect = document.getElementById('language');
+let currentLanguage;
 function setLanguage(language) {
+  if (currentLanguage === language) return;
+  currentLanguage = language;
   const strings = translations[language];
   document.documentElement.lang = language;
-  for (const node of document.querySelectorAll('[data-i18n]')) node.textContent = strings[node.dataset.i18n];
+  for (const node of document.querySelectorAll('[data-i18n]')) {
+    const value = strings[node.dataset.i18n];
+    if (node.textContent !== value) node.textContent = value;
+  }
   document.title = strings.pageTitle;
   document.querySelector('meta[name="description"]').content = strings.description;
   document.querySelector('.demo-popup').setAttribute('aria-label', strings.demoAria);
@@ -54,6 +60,7 @@ const engines = [
 const grid = document.getElementById('demo-engines');
 const list = document.getElementById('engine-list');
 const selected = document.getElementById('selected-name');
+let selectedButton;
 for (const [id, name] of engines) {
   const button = document.createElement('button');
   button.type = 'button';
@@ -61,6 +68,7 @@ for (const [id, name] of engines) {
   button.setAttribute('aria-label', name);
   button.setAttribute('aria-pressed', String(id === 'google'));
   button.classList.toggle('active', id === 'google');
+  if (id === 'google') selectedButton = button;
   const logo = document.createElement('span');
   logo.className = 'demo-mark';
   const image = document.createElement('img');
@@ -70,12 +78,13 @@ for (const [id, name] of engines) {
   logo.append(image);
   button.append(logo, document.createTextNode(name));
   button.addEventListener('click', () => {
+    if (selectedButton === button) return;
+    selectedButton.classList.toggle('active', false);
+    selectedButton.setAttribute('aria-pressed', 'false');
+    button.classList.toggle('active', true);
+    button.setAttribute('aria-pressed', 'true');
+    selectedButton = button;
     selected.textContent = name;
-    for (const item of grid.children) {
-      const active = item === button;
-      item.classList.toggle('active', active);
-      item.setAttribute('aria-pressed', String(active));
-    }
   });
   grid.append(button);
   const item = document.createElement('span');
